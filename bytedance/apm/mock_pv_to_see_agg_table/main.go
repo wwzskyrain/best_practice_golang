@@ -8,8 +8,6 @@ import (
 	"net/http"
 	"strconv"
 	"time"
-
-	"code.byted.org/gopkg/logs"
 )
 
 func sendRequest(bdDid string) {
@@ -69,7 +67,7 @@ func sendRequest(bdDid string) {
 		fmt.Println("Error reading response:", err)
 		return
 	}
-	logs.Info("status_code=%d, log_id= %s , body=%s", resp.StatusCode, resp.Header.Get("X-Tt-Logid"), body)
+	fmt.Printf("status_code=%d, log_id= %s , body=%s\n", resp.StatusCode, resp.Header.Get("X-Tt-Logid"), body)
 }
 
 func sendOnce() {
@@ -91,13 +89,13 @@ func doSendRepeatedly(ticker *time.Ticker) {
 	for range ticker.C {
 		var bdDid string
 		for i := 0; i < 4; i++ {
-			logs.Info("sending request [%d]", n)
+			fmt.Printf("sending request [%d]\n", n)
 			bdDid = strconv.Itoa(rand.Int())
 			sendRequest(bdDid)
 			n++
 		}
 	}
-	logs.Info("doSendRepeatedly is Over.")
+	fmt.Printf("doSendRepeatedly is Over.\n")
 }
 
 func main() {

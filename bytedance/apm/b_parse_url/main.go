@@ -3,8 +3,6 @@ package main
 import (
 	"fmt"
 	"net/url"
-
-	"code.byted.org/middleware/hertz/pkg/app"
 )
 
 func main() {

@@ -3,9 +3,8 @@ package main
 import (
 	"context"
 	"fmt"
+	"log"
 	"time"
-
-	"code.byted.org/gopkg/logs"
 
 	"github.com/pratice/golang/util"
 )
@@ -21,8 +20,7 @@ func testTicker() {
 	go func() {
 		for t := range ticker.C {
 			fmt.Println(t)
-			ctx := context.Background()
-			logs.CtxInfo(ctx, "来一次检查并报警, t=%v", t)
+			log.Printf("来一次检查并报警, t=%v", t)
 		}
 	}()
 	time.Sleep(10 * time.Second)
@@ -34,8 +32,7 @@ func testTicker2() {
 	ticker := time.NewTicker(time.Second)
 	go func() {
 		for range ticker.C {
-			ctx := context.Background()
-			logs.CtxInfo(ctx, "来一次检查并报警, t=%v")
+			log.Printf("来一次检查并报警, t=%v", ticker)
 		}
 	}()
 	// defer ticker.Stop()
@@ -49,9 +46,7 @@ func StartCrashMonitorService() {
 		ticker := time.NewTicker(3 * time.Second)
 		defer ticker.Stop()
 		for range ticker.C {
-			// ctx := createContext()
-			ctx := context.Background()
-			logs.CtxInfo(ctx, "来一次检查并报警")
+			log.Printf("来一次检查并报警")
 		}
 	})
 

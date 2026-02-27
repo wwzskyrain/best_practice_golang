@@ -5,11 +5,10 @@ import (
 	"bytes"
 	"fmt"
 	"io"
+	"log"
 	"os"
 	"path/filepath"
 	"strings"
-
-	"code.byted.org/gopkg/logs"
 )
 
 // 解压内存中的 ZIP 文件到本地目录
@@ -27,7 +26,7 @@ func unzipFromMemory(zipData []byte, destDir string) error {
 			fmt.Println("Skipping:", file.Name) // 日志输出跳过的文件
 			continue
 		}
-		logs.Info("file_name=%s", file.Name)
+		log.Printf("file_name=%s", file.Name)
 		destFilePath := filepath.Join(destDir, file.Name)
 		// 检查并创建目录（如果是文件夹）
 		if file.FileInfo().IsDir() {
