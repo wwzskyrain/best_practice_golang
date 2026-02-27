@@ -1,0 +1,18 @@
+package time_util
+
+import (
+	"testing"
+)
+
+func TestPrintDuration(t *testing.T) {
+	// PrintDuration(1754964929750, 1755014488115)
+
+	// PrintDuration(1755071298011, 1755071297975)
+	// 1755071357888
+	// 1755069694972
+	PrintDuration(1755071357888, 1755069694972)
+
+	// 1755071528702
+	// 1755068865734
+	PrintDuration(1755071528702, 1755068865734)
+}

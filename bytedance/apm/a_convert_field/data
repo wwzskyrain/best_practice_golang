@@ -1,0 +1,457 @@
+    @JSONField(name = "crash_thread_name")
+    @ApmJsonPath(jsonPath = "$.crash_thread_name")
+    private String crash_thread_name;
+
+    @JSONField(name = "isOOM")
+    @ApmJsonPath(jsonPath = "$.isOOM", type = JsonPathType.DATA)
+    private String isOOM;
+
+    @JSONField(name = "isJava")
+    @ApmJsonPath(jsonPath = "$.isJava")
+    private String isJava;
+
+    // 不输出.
+    @ApmJsonPath(jsonPath = "$.is_anr")
+    private String isANR;
+
+    @JSONField(name = "crash_time")
+    @ApmJsonPath(jsonPath = "$.crash_time")
+    private String crash_time;
+
+
+    @JSONField(name = "launch_mode")
+    @ApmJsonPath(jsonPath = "$.launch_mode")
+    private String launch_mode;
+
+
+    @JSONField(name = "launch_time")
+    @ApmJsonPath(jsonPath = "$.launch_time")
+    private String launch_time;
+
+
+    @JSONField(name = "crash_md5")
+    @ApmJsonPath(jsonPath = "$.crash_md5")
+    private String crash_md5;
+
+    @JSONField(name = "miniapp_id")
+    @ApmJsonPath(jsonPath = "$.miniapp_id")
+    private String miniapp_id;
+
+    @JSONField(name = "plugin_info")
+    @ApmJsonPath(jsonPath = "$.plugin_info")
+    private String plugin_info;
+
+    @JSONField(name = "app_count")
+    @ApmJsonPath(jsonPath = "$.app_count")
+    private String app_count;
+
+    @JSONField(name = "magic_tag")
+    @ApmJsonPath(jsonPath = "$.magic_tag")
+    private String magic_tag;
+
+    @JSONField(name = "tid")
+    @ApmJsonPath(jsonPath = "$.tid")
+    private String tid;
+
+    @JSONField(name = "custom")
+    @ApmJsonPath(jsonPath = "$.custom")
+    private String custom;
+
+    @JSONField(name = "pid")
+    @ApmJsonPath(jsonPath = "$.pid")
+    private String pid;
+
+    @JSONField(name = "app_start_time")
+    @ApmJsonPath(jsonPath = "$.app_start_time")
+    private String app_start_time;
+
+    @JSONField(name = "app_start_time_readable")
+    @ApmJsonPath(jsonPath = "$.app_start_time_readable")
+    private String app_start_time_readable;
+
+    @JSONField(name = "activity_trace_last_create_activity")
+    @ApmJsonPath(jsonPath = "$.activity_trace.last_create_activity")
+    private String activity_trace_last_create_activity;
+
+    @JSONField(name = "activity_trace_last_start_activity")
+    @ApmJsonPath(jsonPath = "$.activity_trace.last_start_activity")
+    private String activity_trace_last_start_activity;
+
+    @JSONField(name = "activity_trace_last_resume_activity")
+    @ApmJsonPath(jsonPath = "$.activity_trace.last_resume_activity")
+    private String activity_trace_last_resume_activity;
+
+    @JSONField(name = "activity_trace_last_pause_activity")
+    @ApmJsonPath(jsonPath = "$.activity_trace.last_pause_activity")
+    private String activity_trace_last_pause_activity;
+
+    @JSONField(name = "activity_trace_last_stop_activity")
+    @ApmJsonPath(jsonPath = "$.activity_trace.last_stop_activity")
+    private String activity_trace_last_stop_activity;
+
+    @JSONField(name = "activity_trace_alive_activities")
+    @ApmJsonPath(jsonPath = "$.activity_trace.alive_activities")
+    private String activity_trace_;
+
+    @JSONField(name = "activity_trace_finish_activities")
+    @ApmJsonPath(jsonPath = "$.activity_trace.finish_activities")
+    private String activity_trace_finish_activities;
+
+    @JSONField(name = "custom_long_activity_track")
+    @ApmJsonPath(jsonPath = "$.custom_long.activity_track")
+    private String custom_long_activity_track;
+
+    @JSONField(name = "patch_info")
+    @ApmJsonPath(jsonPath = "$.patch_info")
+    private String patch_info;
+
+    @JSONField(name = "business")
+    @ApmJsonPath(jsonPath = "$.business")
+    private String business;
+
+    @JSONField(name = "is_background")
+    @ApmJsonPath(jsonPath = "$.is_background")
+    private String is_background;
+
+    @JSONField(name = "history_message")
+    @ApmJsonPath(jsonPath = "$.history_message")
+    private String history_message;
+
+    @JSONField(name = "current_message_msg")
+    @ApmJsonPath(jsonPath = "$.current_message.msg")
+    private String current_message_msg;
+
+    @JSONField(name = "current_message_cpuDuration")
+    @ApmJsonPath(jsonPath = "$.current_message.cpuDuration")
+    private String current_message_cpuDuration;
+
+    @JSONField(name = "current_message_duration")
+    @ApmJsonPath(jsonPath = "$.current_message.duration")
+    private String current_message_duration;
+
+    @JSONField(name = "current_message_type")
+    @ApmJsonPath(jsonPath = "$.current_message.type")
+    private String current_message_type;
+
+    @JSONField(name = "current_message_count")
+    @ApmJsonPath(jsonPath = "$.current_message.count")
+    private String current_message_count;
+
+    @JSONField(name = "current_message_messageCount")
+    @ApmJsonPath(jsonPath = "$.current_message.messageCount")
+    private String current_message_messageCount;
+
+    @JSONField(name = "current_message_lastDuration")
+    @ApmJsonPath(jsonPath = "$.current_message.lastDuration")
+    private String current_message_lastDuration;
+
+    @JSONField(name = "current_message_start")
+    @ApmJsonPath(jsonPath = "$.current_message.start")
+    private String current_message_start;
+
+    @JSONField(name = "current_message_end")
+    @ApmJsonPath(jsonPath = "$.current_message.end")
+    private String current_message_end;
+
+    @JSONField(name = "current_message_belong_frame")
+    @ApmJsonPath(jsonPath = "$.current_message.belong_frame")
+    private String current_message_belong_frame;
+
+    @JSONField(name = "pending_messages")
+    @ApmJsonPath(jsonPath = "$.pending_messages")
+    private String pending_messages;
+
+    @JSONField(name = "battery")
+    @ApmJsonPath(jsonPath = "$.battery")
+    private String battery;
+
+    @JSONField(name = "all_thread_stacks_thread_all_count")
+    @ApmJsonPath(jsonPath = "$.all_thread_stacks.thread_all_count")
+    private String all_thread_stacks_thread_all_count;
+
+    @JSONField(name = "all_thread_stacks_thread_stacks")
+    @ApmJsonPath(jsonPath = "$.all_thread_stacks.thread_stacks")
+    private String all_thread_stacks_thread_stacks;
+
+
+    @JSONField(name = "logcat")
+    @ApmJsonPath(jsonPath = "$.logcat")
+    private String logcat;
+
+    @JSONField(name = "memory_info_dalvikPrivateDirty")
+    @ApmJsonPath(jsonPath = "$.memory_info.dalvikPrivateDirty")
+    private String memory_info_dalvikPrivateDirty;
+
+    @JSONField(name = "memory_info_dalvikPss")
+    @ApmJsonPath(jsonPath = "$.memory_info.dalvikPss")
+    private String memory_info_dalvikPss;
+
+    @JSONField(name = "memory_info_dalvikSharedDirty")
+    @ApmJsonPath(jsonPath = "$.memory_info.dalvikSharedDirty")
+    private String memory_info_dalvikSharedDirty;
+
+    @JSONField(name = "memory_info_nativePrivateDirty")
+    @ApmJsonPath(jsonPath = "$.memory_info.nativePrivateDirty")
+    private String memory_info_nativePrivateDirty;
+
+    @JSONField(name = "memory_info_nativePss")
+    @ApmJsonPath(jsonPath = "$.memory_info.nativePss")
+    private String memory_info_nativePss;
+
+    @JSONField(name = "memory_info_nativeSharedDirty")
+    @ApmJsonPath(jsonPath = "$.memory_info.nativeSharedDirty")
+    private String memory_info_nativeSharedDirty;
+
+    @JSONField(name = "memory_info_otherPrivateDirty")
+    @ApmJsonPath(jsonPath = "$.memory_info.otherPrivateDirty")
+    private String memory_info_otherPrivateDirty;
+
+    @JSONField(name = "memory_info_otherPss")
+    @ApmJsonPath(jsonPath = "$.memory_info.otherPss")
+    private String memory_info_otherPss;
+
+    @JSONField(name = "memory_info_otherSharedDirty")
+    @ApmJsonPath(jsonPath = "$.memory_info.otherSharedDirty")
+    private String memory_info_otherSharedDirty;
+
+    @JSONField(name = "memory_info_summary_graphics")
+    @ApmJsonPath(jsonPath = "$.memory_info.summary\\.graphics")
+    private String memory_info_summary_graphics;
+
+    @JSONField(name = "memory_info_totalPrivateClean")
+    @ApmJsonPath(jsonPath = "$.memory_info.totalPrivateClean")
+    private String memory_info_totalPrivateClean;
+
+    @JSONField(name = "memory_info_totalPrivateDirty")
+    @ApmJsonPath(jsonPath = "$.memory_info.totalPrivateDirty")
+    private String memory_info_totalPrivateDirty;
+
+    @JSONField(name = "memory_info_totalPss")
+    @ApmJsonPath(jsonPath = "$.memory_info.totalPss")
+    private String memory_info_totalPss;
+
+    @JSONField(name = "memory_info_totalSharedClean")
+    @ApmJsonPath(jsonPath = "$.memory_info.totalSharedClean")
+    private String memory_info_totalSharedClean;
+
+    @JSONField(name = "memory_info_totalSharedDirty")
+    @ApmJsonPath(jsonPath = "$.memory_info.totalSharedDirty")
+    private String memory_info_totalSharedDirty;
+
+    @JSONField(name = "memory_info_totalSwappablePss")
+    @ApmJsonPath(jsonPath = "$.memory_info.totalSwappablePss")
+    private String memory_info_totalSwappablePss;
+
+    @JSONField(name = "sys_memory_info_availMem")
+    @ApmJsonPath(jsonPath = "$.sys_memory_info.availMem")
+    private String sys_memory_info_availMem;
+
+    @JSONField(name = "sys_memory_info_lowMemory")
+    @ApmJsonPath(jsonPath = "$.sys_memory_info.lowMemory")
+    private String sys_memory_info_lowMemory;
+
+    @JSONField(name = "sys_memory_info_threshold")
+    @ApmJsonPath(jsonPath = "$.sys_memory_info.threshold")
+    private String sys_memory_info_threshold;
+
+    @JSONField(name = "sys_memory_info_totalMem")
+    @ApmJsonPath(jsonPath = "$.sys_memory_info.totalMem")
+    private String sys_memory_info_totalMem;
+
+    @JSONField(name = "app_memory_info_native_heap_size")
+    @ApmJsonPath(jsonPath = "$.app_memory_info.native_heap_size")
+    private String app_memory_info_native_heap_size;
+
+    @JSONField(name = "app_memory_info_native_heap_alloc_size")
+    @ApmJsonPath(jsonPath = "$.app_memory_info.native_heap_alloc_size")
+    private String app_memory_info_native_heap_alloc_size;
+
+    @JSONField(name = "app_memory_info_native_heap_free_size")
+    @ApmJsonPath(jsonPath = "$.app_memory_info.native_heap_free_size")
+    private String app_memory_info_native_heap_free_size;
+
+    @JSONField(name = "app_memory_info_max_memory")
+    @ApmJsonPath(jsonPath = "$.app_memory_info.max_memory")
+    private String app_memory_info_max_memory;
+
+    @JSONField(name = "app_memory_info_free_memory")
+    @ApmJsonPath(jsonPath = "$.app_memory_info.free_memory")
+    private String app_memory_info_free_memory;
+
+    @JSONField(name = "app_memory_info_total_memory")
+    @ApmJsonPath(jsonPath = "$.app_memory_info.total_memory")
+    private String app_memory_info_total_memory;
+
+    @JSONField(name = "app_memory_info_memory_class")
+    @ApmJsonPath(jsonPath = "$.app_memory_info.memory_class")
+    private String app_memory_info_memory_class;
+
+    @JSONField(name = "app_memory_info_large_memory_class")
+    @ApmJsonPath(jsonPath = "$.app_memory_info.large_memory_class")
+    private String app_memory_info_large_memory_class;
+
+    @JSONField(name = "crash_uuid")
+    @ApmJsonPath(jsonPath = "$.crash_uuid")
+    private String crash_uuid;
+
+    @JSONField(name = "storage_inner_free")
+    @ApmJsonPath(jsonPath = "$.storage.inner_free")
+    private String storage_inner_free;
+
+    @JSONField(name = "storage_inner_total")
+    @ApmJsonPath(jsonPath = "$.storage.inner_total")
+    private String storage_inner_total;
+
+    @JSONField(name = "storage_sdcard_free")
+    @ApmJsonPath(jsonPath = "$.storage.sdcard_free")
+    private String storage_sdcard_free;
+
+    @JSONField(name = "storage_sdcard_total")
+    @ApmJsonPath(jsonPath = "$.storage.sdcard_total")
+    private String storage_sdcard_total;
+
+    @JSONField(name = "storage_inner_free_real")
+    @ApmJsonPath(jsonPath = "$.storage.inner_free_real")
+    private String storage_inner_free_real;
+
+    @JSONField(name = "storage_inner_total_real")
+    @ApmJsonPath(jsonPath = "$.storage.inner_total_real")
+    private String storage_inner_total_real;
+
+    @JSONField(name = "storage_total")
+    @ApmJsonPath(os = "ios", jsonPath = "$.storage.total")
+    private String storage_total;
+
+    @JSONField(name = "storage_free")
+    @ApmJsonPath(os = "ios", jsonPath = "$.storage.free")
+    private String storage_free;
+
+
+    @JSONField(name = "launch_did")
+    @ApmJsonPath(jsonPath = "$.launch_did")
+    private String launch_did;
+
+    @JSONField(name = "jiffy")
+    @ApmJsonPath(jsonPath = "$.jiffy")
+    private String jiffy;
+
+    @JSONField(name = "lastAliveTime")
+    @ApmJsonPath(jsonPath = "$.lastAliveTime")
+    private String lastAliveTime;
+
+    @JSONField(name = "has_dump")
+    @ApmJsonPath(jsonPath = "$.has_dump")
+    private String has_dump;
+
+    @JSONField(name = "upload_scene")
+    @ApmJsonPath(jsonPath = "$.upload_scene")
+    private String upload_scene;
+
+    @JSONField(name = "is_native_crash")
+    @ApmJsonPath(jsonPath = "$.is_native_crash")
+    private String is_native_crash;
+
+    @JSONField(name = "repack_time")
+    private String repack_time;
+
+    @JSONField(name = "java_end")
+    @ApmJsonPath(jsonPath = "$.java_end")
+    private String java_end;
+
+    @JSONField(name = "java_data")
+    @ApmJsonPath(jsonPath = "$.java_data")
+    private String java_data;
+
+    @JSONField(name = "is_root")
+    @ApmJsonPath(jsonPath = "$.is_root")
+    private String is_root;
+
+    @JSONField(name = "fd_count")
+    @ApmJsonPath(jsonPath = "$.fd_count")
+    private String fd_count;
+
+    @JSONField(name = "event_type")
+    @ApmJsonPath(jsonPath = "$.event_type")
+    private String event_type;
+
+    @JSONField(name = "main_process")
+    @ApmJsonPath(jsonPath = "$.main_process")
+    private String main_process;
+
+    @JSONField(name = "crash_type")
+    @ApmJsonPath(jsonPath = "$.crash_type")
+    private String crash_type;
+
+    // ios crash 一级特有
+    @JSONField(name = "m_zoom_free")
+    @ApmJsonPath(jsonPath = "$.m_zoom_free")
+    private String m_zoom_free;
+
+    @JSONField(name = "session_id")
+    @ApmJsonPath(jsonPath = "$.session_id")
+    private String session_id;
+
+    @JSONField(name = "crash_detail_type")
+    @ApmJsonPath(jsonPath = "$.crash_detail.type")
+    private String is_native_crash_type;
+
+    @JSONField(name = "crash_detail_name")
+    @ApmJsonPath(jsonPath = "$.crash_detail.name")
+    private String is_native_crash_name;
+
+    @JSONField(name = "crash_detail_reason")
+    @ApmJsonPath(jsonPath = "$.crash_detail.reason")
+    private String is_native_crash_reason;
+
+
+    @JSONField(name = "app_version")
+    @ApmJsonPath(jsonPath = "$.app_version")
+    private String app_version;
+
+    @JSONField(name = "d_zoom_free")
+    @ApmJsonPath(jsonPath = "$.d_zoom_free")
+    private String d_zoom_free;
+
+    @JSONField(name = "is_launch_crash")
+    @ApmJsonPath(jsonPath = "$.is_launch_crash")
+    private String is_launch_crash;
+
+    @JSONField(name = "update_version_code")
+    @ApmJsonPath(jsonPath = "$.update_version_code")
+    private String update_version_code;
+
+    @JSONField(name = "memory_usage")
+    @ApmJsonPath(jsonPath = "$.memory_usage")
+    private String memory_usage;
+
+    @JSONField(name = "is_exit")
+    @ApmJsonPath(jsonPath = "$.is_exit")
+    private String is_exit;
+
+    @JSONField(name = "timestamp")
+    @ApmJsonPath(jsonPath = "$.timestamp")
+    private String timestamp;
+
+    @JSONField(name = "is_env_abnormal")
+    @ApmJsonPath(jsonPath = "$.is_env_abnormal")
+    private String is_env_abnormal;
+
+    @JSONField(name = "os_version")
+    @ApmJsonPath(jsonPath = "$.os_version")
+    private String os_version;
+
+    @JSONField(name = "m_zoom_percent")
+    @ApmJsonPath(jsonPath = "$.m_zoom_percent")
+    private String m_zoom_percent;
+
+    @JSONField(name = "memory_total")
+    @ApmJsonPath(jsonPath = "$.memory.total")
+    private String memory_total;
+
+    @JSONField(name = "memory_free")
+    @ApmJsonPath(jsonPath = "$.memory.free")
+    private String memory_free;
+
+    @JSONField(name = "inapp_time")
+    @ApmJsonPath(jsonPath = "$.inapp_time")
+    private String inapp_time;
