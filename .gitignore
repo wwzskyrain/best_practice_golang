@@ -35,3 +35,5 @@ go.work.sum
 /unzipped_files/test_zip_pdf/sub_src/抖音支付业务的发展分析.pdf
 /buffer_demo/output.txt
 /.idea/MarsCodeWorkspaceAppSettings.xml
+
+.DS_Store
